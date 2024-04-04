@@ -44,9 +44,9 @@ header .title {
   background-color: rgb(127, 60, 129);
 }
 header .title h1 {
-  color: rgb(92, 91, 91);
+  color: rgb(224, 224, 224);
   margin: 0;
-  padding: 50px 20px 0 0;
+  padding: 50px 0 0 6vw;
   font-size: 3rem;
   animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

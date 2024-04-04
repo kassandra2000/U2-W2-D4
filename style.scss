@@ -60,7 +60,7 @@ header {
     
     background-color: $hero-color;
     h1 {
-        @include title-big(50px 20px 0 0, rgb(92, 91, 91))
+        @include title-big(50px 0  0 6vw, rgb(224, 224, 224))
      
     }
   }
