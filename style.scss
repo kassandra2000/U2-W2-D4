@@ -27,7 +27,17 @@ $container-color: rgb(163, 216, 219);
   justify-content: space-around;
   align-items: center;
 }
-
+// map
+$btn-color: (
+  "blue": rgb(96, 96, 241),
+  "orange": #ff8700,
+  "green": #4caf50,
+);
+@each $key, $value in $btn-color {
+  .color-#{$key} {
+    background-color: $value;
+  }
+}
 // inizio css annidato
 body {
   margin: 0;
@@ -55,13 +65,11 @@ header {
       }
     }
   }
- 
+
   .title {
-    
     background-color: $hero-color;
     h1 {
-        @include title-big(50px 0  0 6vw, rgb(224, 224, 224))
-     
+      @include title-big(50px 0 0 6vw, rgb(224, 224, 224));
     }
   }
   .hero {
@@ -76,6 +84,11 @@ header {
     }
     img {
       animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      @include floating(
+        10px,
+        1px 6px 10px rgb(189, 187, 187),
+        1px solid rgb(247, 244, 244)
+      );
     }
   }
   .button {
@@ -84,19 +97,12 @@ header {
     background-color: $hero-color;
     margin-top: -5px;
     button {
-      background-color: rgb(96, 96, 241);
       padding: 10px;
       border-radius: 20px;
       border: none;
       box-shadow: 1px 3px 5px black;
       animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) 1s
         backwards;
-    }
-    button:nth-of-type(2) {
-      background-color: rgba(235, 202, 20, 0.829);
-    }
-    button:nth-of-type(3) {
-      background-color: green;
     }
   }
 }
@@ -107,6 +113,8 @@ header {
   p {
     max-width: 50%;
   }
-  // img {
-  // }
+  img {
+    margin-right: 10px;
+    @include floating(30px, 1px 6px 10px rgb(56, 56, 56), none);
+  }
 }
