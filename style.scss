@@ -1,0 +1,112 @@
+// import
+@import "scss/partials/animazioni";
+@import "scss/partials/buttons";
+@import "scss/partials/font";
+@import "scss/partials/mixinsGenerici";
+@import "scss/partials/reset";
+@import "scss/partials/spaziature";
+
+// costanti
+$nav-color: rgb(242, 170, 252);
+$hero-color: rgb(127, 60, 129);
+$container-color: rgb(163, 216, 219);
+
+// da importare-flex
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+%flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// inizio css annidato
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  nav {
+    @extend %flex-between;
+    background-color: $nav-color;
+    p {
+      font-size: 2rem;
+      padding: $padding;
+    }
+    ul {
+      @extend %flex-around;
+      li {
+        list-style: none;
+        padding: $padding;
+        font-size: large;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+ 
+  .title {
+    
+    background-color: $hero-color;
+    h1 {
+        @include title-big(50px 20px 0 0, rgb(92, 91, 91))
+     
+    }
+  }
+  .hero {
+    @extend %flex-around;
+    background-color: $hero-color;
+    padding: $vertical-padding;
+    margin-top: -4px;
+
+    p {
+      max-width: 50%;
+      animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    img {
+      animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+  }
+  .button {
+    @extend %flex-around;
+    padding: $vertical-padding;
+    background-color: $hero-color;
+    margin-top: -5px;
+    button {
+      background-color: rgb(96, 96, 241);
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      box-shadow: 1px 3px 5px black;
+      animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) 1s
+        backwards;
+    }
+    button:nth-of-type(2) {
+      background-color: rgba(235, 202, 20, 0.829);
+    }
+    button:nth-of-type(3) {
+      background-color: green;
+    }
+  }
+}
+.container {
+  @extend %flex-around;
+
+  padding: $vertical-padding;
+  p {
+    max-width: 50%;
+  }
+  // img {
+  // }
+}

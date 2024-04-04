@@ -1,0 +1,8 @@
+
+@mixin title-big($padding:1rem, $color:black) {
+    color: $color;
+    margin: 0;
+    padding: $padding;
+    font-size: 3rem;
+    animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }

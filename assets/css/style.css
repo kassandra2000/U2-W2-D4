@@ -1,0 +1,90 @@
+@keyframes hero-animation {
+  from {
+    position: relative;
+    top: -15px;
+  }
+  to {
+    top: 0;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container, header .button, header .hero, header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header nav {
+  background-color: rgb(242, 170, 252);
+}
+header nav p {
+  font-size: 2rem;
+  padding: 0 20px;
+}
+header nav ul li {
+  list-style: none;
+  padding: 0 20px;
+  font-size: large;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header .title {
+  background-color: rgb(127, 60, 129);
+}
+header .title h1 {
+  color: rgb(92, 91, 91);
+  margin: 0;
+  padding: 50px 20px 0 0;
+  font-size: 3rem;
+  animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+header .hero {
+  background-color: rgb(127, 60, 129);
+  padding: 40px 0;
+  margin-top: -4px;
+}
+header .hero p {
+  max-width: 50%;
+  animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+header .hero img {
+  animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+header .button {
+  padding: 40px 0;
+  background-color: rgb(127, 60, 129);
+  margin-top: -5px;
+}
+header .button button {
+  background-color: rgb(96, 96, 241);
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 3px 5px black;
+  animation: hero-animation 2.5s cubic-bezier(0.165, 0.84, 0.44, 1) 1s backwards;
+}
+header .button button:nth-of-type(2) {
+  background-color: rgba(235, 202, 20, 0.829);
+}
+header .button button:nth-of-type(3) {
+  background-color: green;
+}
+
+.container {
+  padding: 40px 0;
+}
+.container p {
+  max-width: 50%;
+}/*# sourceMappingURL=style.css.map */
